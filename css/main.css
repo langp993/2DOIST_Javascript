@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+  height: 100%;
+  width: 100%;
+  z-index: -117;
+  position: absolute;
+  top: 0;
+  position: fixed;
+}
+
+.Headercontainer {
+  background-color: white;
+  display: flex;
+  justify-content: center; /* Horizontally center the button */;
+  align-items: center; /* Center items vertically */
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  margin-right: 15px; /* Add margin to create space between the logo and the header */
+}
+
+.Todolist-H1Header {
+  color: black; /* Set text color to red */
+  font-size: 24px; /* Set font size */
+  /* Add any other styles you want */
+  font-family: 'Futura Bold', sans-serif; /* Apply Futura Bold font */
+}
+
+
+
+
+.Headerbuttoncontainer {
+  background-color: white;
+  display: flex;
+  justify-content: center; /* Horizontally center the button */;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+
+}
+
+/* CSS for buttons inside Headerbuttoncontainer */
+.Headerbuttoncontainer button {
+  /* Add your specific styles here */
+  /* For example: */
+  background-color: white;
+  color: black;
+  width: 300px;
+}
+
+
+
+
+.Inputbuttoncontainer {
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Horizontally center the button */;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+  margin: 20px auto; /* Center horizontally */
+  padding: 5px;
+  width: 700px;
+  /* width: 90%; */
+
+}
+
+@media (max-width: 768px) {
+  /* Change width to 100% for screens smaller than medium */
+  .Inputbuttoncontainer {
+    width: 90%;
+  }
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.add-button {
+  /* margin-right: 20px; */
+  width: 240px;
+  background-color: #ff7700;
+}
+
+.ThreeListcontainer {
+  background-color: white;
+  display: flex;
+  justify-content: center; /* Horizontally center the button */;
+}
+
+.Maintodobody {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0
+}
+  
+
+
+
+
+
+.input-container {
+  display: flex;
+  margin-bottom: 40px; /* Add margin to the bottom of the input container */
+}
+
+#todoInput {
+  margin: 10px; /* Add margin to the bottom of the input container */
+  border: 1px solid #ccc; /* Add a solid border with color #ccc */
+  padding: 5px; /* Add padding inside the input field */
+  box-sizing: border-box; /* Include padding and border in the input field's total width */
+  margin-right: 20px; /* Add margin to the right of the input field */
+  width: 80%;
+}
+
+#todoInput:focus {
+  outline: none; /* Remove the outline when input field is focused */
+}
+
+#locationInput {
+  margin: 10px; /* Add margin to the bottom of the input container */
+  border: 1px solid #ccc; /* Add a solid border with color #ccc */
+  padding: 5px; /* Add padding inside the input field */
+  box-sizing: border-box; /* Include padding and border in the input field's total width */
+  width: 80%;
+}
+
+#locationInput:focus {
+  outline: none; /* Remove the outline when input field is focused */
+}
+
+/* CSS for Autocomplete input */
+.pac-container {
+  width: 500px; /* Adjust the width as needed */
+}
+
+#dueDateInput {
+  margin: 10px; /* Add margin to the bottom of the input container */
+  /* flex: 1; Grow to fill available space */
+  border: 1px solid #ccc; /* Add a solid border with color #ccc */
+  padding: 5px; /* Add padding inside the input field */
+  box-sizing: border-box; /* Include padding and border in the input field's total width */
+  margin-right: 20px; /* Add margin to the right of the input field */
+  width: 80%;
+}
+
+#dueTimeInput {
+  margin: 10px; /* Add margin to the bottom of the input container */
+  /* flex: 1; Grow to fill available space */
+  border: 1px solid #ccc; /* Add a solid border with color #ccc */
+  padding: 5px; /* Add padding inside the input field */
+  box-sizing: border-box; /* Include padding and border in the input field's total width */
+  margin-right: 20px; /* Add margin to the right of the input field */
+  width: 80%;
+}
+
+#map {
+  position: fixed; /* Change to fixed positioning */
+  top: 0;
+  left: 0;
+  height: 100vh; /* Use viewport height to cover the entire vertical space */
+  width: 100vw; /* Use viewport width to cover the entire horizontal space */
+  /* background-color: red; */
+  z-index: -1;
+}
+
+
+
+
+
+
+/* Remove default list styling */
+ul {
+  margin: 0; /* Reset margin to remove any default margin */
+  list-style-type: none;
+}
+
+button {
+  border: none; /* Remove default button border */
+  padding: 10px; /* Add padding to the button */
+  background-color: black; /* Set button background color */
+  color: white; /* Set text color to white */
+  cursor: pointer; /* Show pointer cursor on hover */
+  margin: 10px;
+  width: 80%;
+  flex-direction: row;
+}
+
+#todoList li .subtask,
+#completedList li .subtask {
+  /* position: fixed; Fix the position of the list */
+/* background-color: yellow; */
+width: 80px;
+overflow-y: auto;
+}
+
+#todoList,
+#completedList {
+  position: fixed; /* Fix the position of the list */
+  bottom: 0; /* Stick the list to the bottom of the viewport */
+  height: 70%; /* Set a maximum height for the container */
+  overflow-y: auto; /* Add vertical scrollbar when content exceeds container height */
+  background-color: rgba(255, 255, 255, 0); /* Transparent white */
+  width: 100%; /* Occupy the full width of the viewport */
+  display: flex; /* Use flexbox to center the items horizontally */
+  flex-direction: column;
+  justify-content: flex-start; /* Center the items horizontally */
+  padding: 20px 0; /* Added top padding to accommodate for the fixed position header */
+  z-index: -1;
+}
+
+#todoList li,
+#completedList li {
+  padding: 20px;
+  width: 400px;
+  background-color: white;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  /* margin-bottom: 20px; */
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+#todoList li:first-child,
+#completedList li:first-child {
+  margin-top: 0; /* Remove top margin for the first list item */
+}
+
+#todoList li .subtask,
+#completedList li .subtask{
+  padding: 20px;
+  width: 300px;
+  background-color: white;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  /* margin-bottom: 20px; */
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+  /* Change width to 100% for screens smaller than medium */
+  #todoList,
+  #completedList {
+    width: 100%;
+    bottom: 0;
+    height: 70%;
+    /* overflow-y: auto; Add vertical scrollbar when content exceeds container height */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Change width to 100% for screens smaller than medium */
+  #todoList li,
+  #completedList li {
+    width: 80%;
+    bottom: 0;
+    /* height: 100%; */
+    /* overflow-y: auto; Add vertical scrollbar when content exceeds container height */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Change width to 100% for screens smaller than medium */
+  #todoList li .subtask,
+  #completedList li .subtask {
+    width: 80%;
+    bottom: 0;
+    /* height: 100%; */
+    /* overflow-y: auto; Add vertical scrollbar when content exceeds container height */
+  }
+}
+
+.subtask-button {
+  border: none; /* Remove default button border */
+  padding: 15px; /* Add padding to the button */
+  background-color: green; /* Set button background color */
+  color: #fff; /* Set text color to white */
+  cursor: pointer; /* Show pointer cursor on hover */
+  margin: 10px;
+  width: 80%;
+}
+
+#todoList li .subtask,
+#completedList li .subtask {
+  /* position: fixed; Fix the position of the list */
+background-color: white;
+color: black;
+/* width: 80px; */
+/* overflow-y: auto; */
+}

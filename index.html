@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title></title>
+        <meta name="description" content="">
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <!-- <link href="path/to/tailwind.css" rel="stylesheet"> -->
+        <!-- <link href="node_modules/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> -->
+
+    </head>
+
+    <body>
+
+        <div id="map"></div>
+
+        <div class="Maintodobody">
+
+          <div class="Headercontainer">
+
+            <img src="images/Todologo.webp" alt="Logo" class="logo"> <!-- Corrected path to the image -->
+            <h1 class="Todolist-H1Header">2DOIST</h1>
+
+          </div>
+
+          <div class="background">hello</div>
+
+
+          <div id="board" style="display: block;">
+
+            <div class="Headerbuttoncontainer">
+
+            <button id="activeButton" onclick="showActive()">TODO'S</button>
+            <button id="completedButton" onclick="showCompleted()">COMPLETED TASKS</button>
+            <!-- <button id="groupListButton" onclick="switchToListGroup()">GROUPS</button> -->
+            
+            </div>
+
+            <div id="createTask" style="display: block;">
+
+            <div class="Inputbuttoncontainer">
+
+            <input type="text" id="todoInput" placeholder="Add Todo" style="display: block;">
+            <input type="text" id="locationInput" placeholder="Add Location" style="display: block;">
+            <input type="date" id="dueDateInput" style="display: none;">
+            <input type="time" id="dueTimeInput" style="display: none;">
+
+            <button onclick="addTodo()" class="add-button"">ADD TASK</button>
+
+            </div>
+
+            
+            </div>
+
+            <ul id="todoList"></ul>
+            <ul id="completedList" style="display: none;"></ul>
+            <ul id="groupList" style="display: none;"></ul>
+
+
+          </div>
+
+          </div>
+
+          <div class="ThreeListcontainer">
+
+            <!-- <ul id="todoList"></ul> -->
+            <!-- <ul id="completedList" style="display: none;"></ul>
+            <ul id="groupList" style="display: none;"></ul> -->
+            <!-- <p id="groupParagraph">hello this is a group</p> -->
+
+          </div>
+
+        </div>
+
+
+          <!-- <div id="map"></div> -->
+
+        <script src="js/plugins.js"></script> -->
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5SwNk404MXKIDnMKO-g1tQ_2G6jz93f8&callback=myMap"></script> -->
+
+        <script src="js/main.js"></script>
+        <!-- //This is the google maps Api key last used... -->
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5SwNk404MXKIDnMKO-g1tQ_2G6jz93f8&libraries=places&callback=initMap" async defer></script> -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr3eoqAx3tgFOyPF5nAIFc1Hu1g0xBdNU&libraries=places&callback=initMap" async defer></script>
+    
+    </body>
+
+</html>
+
